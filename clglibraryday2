@@ -1,0 +1,11 @@
+create table books(id int,title varchar(15),author varchar(15),price int,genre varchar(15));
+
+insert into books(title,author,price,genre) values('Ramayana','Valmiki','1900','Epic poetry'),('Mahabharata','VedVyasa','2500','Epic poetry'),('Wings of Fire','Dr.Abdul Kalam','1400','Autobiography'),('Sunny Days','Sunil Gavaskar','1000','Autobiography'),('Great Gatsby','F.Fitzgerald','1300','Fiction');
+
+SELECT * FROM books where price>400;
+
+select * from books where genre in ('History','Science','Fiction');
+
+select * from books where title='The Great Gatsby';
+
+select * from books where author!='Dan Brown';
