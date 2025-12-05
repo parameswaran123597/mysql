@@ -1,0 +1,13 @@
+create table products(id int,name varchar(20),category varchar(20),price int,in_stock varchar(3));
+
+insert into products(name,category,price,in_stock)values('Santhoor','Soap','30','Yes'),('Colgate','Paste','35','Yes'),('Lux','Soap','32','No'),('Chips','Food','80','yes'),('Sprite','Bevrage','40','yes'),('Chilli Powder','Incredient','55','yes'),('Kit Kat','Sweets','25','No');
+
+SELECT distinct category FROM products;
+
+select * from products where in_stock='yes' and price<500; 
+
+select * from products where in_stock='no' or price>1000; 
+
+select name,price from products order by price desc;
+
+select name,price+price*0.18 as price_with_tax from products;
