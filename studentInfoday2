@@ -1,0 +1,11 @@
+create table students(id INT,name varchar(20),age INT,department varchar(20),grade INT);
+
+insert into students(name,age,department,grade values('Rahul','20','CSE','80'),('Sachin','23','IT','89'),('Renjith','21','EEE','71'),('Pooja','20','CSE','95');
+
+SELECT * FROM students where age>20;
+
+SELECT * FROM students where department='CSE' || 'physics';
+
+select * from students where grade=90;
+
+select * from students where grade between '70' and '90';
