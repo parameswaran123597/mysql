@@ -1,0 +1,17 @@
+create table books(id int,title varchar(15),author varchar(20),price int,stock int);
+
+insert into books values('1','The Alchemist','Paulo Coelho','350','50'),('2','Atomic Habits','James Clear','450','40'),('3','Psycology money','Morgan Housel','400','30'),('4','Ikigai','Francesc Miralles','300','60'),('5','Deep Work','Cal Newport','500','20');
+
+
+SELECT * FROM books where price<450 and stock>30;
+
+update books
+set stock=45,price=420
+where title='Deep Work';
+
+delete from books where title='Ikigai';
+
+select avg(price),sum(stock)
+from books;
+
+select * from books order by price desc limit 3;
