@@ -1,0 +1,14 @@
+create table movies(id int,title varchar(30),genre varchar(20),release_year int,rating float,box_office int);
+
+insert into movies values('1','Inception','Sci-Fi','2010','8.8','825'),('2','The Dark Knight','Action','2008','9.0','1004'),('3','Interstellar','Sci-Fi','2014','8.6','677'),('4','Joker','Drama','2019','8.4','1074'),('5','Dunkirk','War','2017','7.9','527');
+
+
+select title,box_office as "Earnings(in cr)" from movies;
+
+select title as "Movie Title",genre as Category from movies;
+
+select id,title,genre,release_year,box_office,rating as "IMDb Score" from movies where genre in('Sci-Fi','Action');
+
+select id,title,genre,rating,box_office,release_year as "Release" from movies where release_year between 2008 and 2015;
+
+select count(*) as "High Rated Movies" from movies where rating>8.5; 
