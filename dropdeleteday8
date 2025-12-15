@@ -1,0 +1,9 @@
+create table products(product_id int,product_name varchar(28),price int);
+
+insert into products values('1','Food','130'),('2','Dress','1599'),('3','Drinks','100'),('4','Soap','35');
+
+alter table products add column category varchar(30);
+
+delete from products;
+
+drop table products;
