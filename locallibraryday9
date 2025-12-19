@@ -1,0 +1,15 @@
+create table books(book_id int primary key,title varchar(28));
+
+create table borrowers(borrower_id int,name varchar(28),book_id int,foreign key (book_id)references books(book_id));
+
+insert into books values('1','The Alchemist'),('2','The Power of Now'),('3','Think and Grow Rich'),('4','Clean Code');
+
+insert into borrowers values('101','Alice','1'),('102','Bob','2'),('103','Charlie',null);
+
+SELECT books.title,borrowers.name FROM books left join borrowers on books.book_id=borrowers.book_id;
+
+SELECT borrowers.name, books.* FROM books right join borrowers on borrowers.book_id=books.book_id;
+
+SELECT books.title FROM books left JOIN borrowers ON (books.book_id) = (borrowers.book_id) where borrowers.book_id is null; 
+
+SELECT borrowers.name FROM borrowers LEFT JOIN books ON borrowers.book_id=books.book_id;
