@@ -1,0 +1,13 @@
+create table employees(emp_id int primary key,name varchar(25));
+
+create table department(emp_id int,department_name varchar(25));
+
+insert into employees values('1','Anjali'),('2','Rohan'),('3','Meena');
+
+insert into department values('1','HR'),('2','IT'),('4','Finance');
+
+select employees.name,department.department_name from employees left join department on employees.id=department.emp_id;
+
+select employees.name from employees inner join department on employees.id=department.emp_id;
+
+select department_name,name from department left join employees on department.emp_id=employees.id;
