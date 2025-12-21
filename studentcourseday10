@@ -1,0 +1,11 @@
+create table students(student_id int primary key,name varchar(25),email varchar(28),unique(email));
+
+create table course(course_id int primary key,course_name varchar(25));
+
+insert into students values('1','Rahul','rahul@gmail.com'),('2','Sachin','sachin@gmail.com'),('3','Pooja','pooja@gmail.com');
+
+insert into course values('101','Java'),('202','Python'),('303','Web Technology'),('404','SQL');
+
+create table enrollments(id int,cid int,foreign key(id)references students(student_id),foreign key(cid)references course(course_id));
+
+insert into enrollments values('1','101'),('1','202'),('2','303'),('3','404'),('3','303');
