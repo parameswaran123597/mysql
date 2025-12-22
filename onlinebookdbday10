@@ -1,0 +1,3 @@
+create table authors(Author_id int primary key not null,Author_name varchar(30),Email_address varchar(25),unique(Email_address));
+
+create table book(Book_id int primary key not null,Book_title varchar(25),author_id int not null,foreign key (author_id) references Authors(Author_id));
