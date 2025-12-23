@@ -1,0 +1,5 @@
+create table authors(id int primary key NOT NULL AUTO_INCREMENT,name varchar(30));
+
+create table books(book_id int primary key NOT NULL AUTO_INCREMENT,title varchar(30),author_id int,foreign key(author_id) references authors(id));
+
+create INDEX author_id on books(author_id);
