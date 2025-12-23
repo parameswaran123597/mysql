@@ -1,0 +1,7 @@
+create table categories(category_id INT AUTO_INCREMENT PRIMARY KEY,category_name varchar(30));
+
+create table books(book_id INT AUTO_INCREMENT PRIMARY KEY,book_name varchar(30),cid int,foreign key(cid)references categories(category_id));
+
+create INDEX book_name ON books(book_name);
+
+show INDEXES FROM books;
